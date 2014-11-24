@@ -29,6 +29,7 @@ class TimersController < ApplicationController
   # POST /timers.json
   def create
     @timer = Timer.new(timer_params)
+    @timer.user = current_user
 
     respond_to do |format|
       if @timer.save
