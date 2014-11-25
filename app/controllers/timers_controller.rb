@@ -1,8 +1,9 @@
 class TimersController < ApplicationController
 
-  #->Prelang (scaffolding:rails/scope_to_user)
+  # Scope each timer to the current user
   before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
 
+  # pull a timer from the db in order to run modification actions
   before_action :set_timer, only: [:show, :edit, :update, :destroy]
 
   # GET /timers

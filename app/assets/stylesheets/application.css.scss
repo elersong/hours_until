@@ -13,11 +13,17 @@
 *= require_tree .
 *= require_self
 */
+
 @import "bootstrap_configuration";
 
 @import "bootstrap-sprockets";
 
 @import "bootstrap";
+
+
+// Color Variables
+$salmon-transparent : rgba(241,178,154,0.3);
+$salmon : rgb(241,178,154);
 
 //->Prelang (ui_framework:twitter_bootstrap)
 
@@ -32,6 +38,42 @@
 }
 
 //->Prelang (user_login:devise)
-.form-user {
+.form-user-salmon {
   max-width: 450px;
+  margin: 0 auto;
+  background: $salmon-transparent;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.transparent {
+  background: $salmon-transparent;
+}
+
+.login-signup-header {
+  padding-bottom: 9px;
+  margin: 110px 0px 20px;
+  text-align: center;
+}
+
+body {
+    background: url(https://ununsplash.imgix.net/40/lUUnN7VGSoWZ3noefeH7_Baker%20Beach-12.jpg?q=75&fm=jpg&s=5f98431cab13b47e7978027b0fd0303c);
+    background-size: cover;
+}
+
+.content {
+    margin: 20px;
+}
+
+.homepage-well {
+  margin-top: 75px;
+  margin-left: 35px;
+}
+
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {   
+  border-color: rgba(100, 100, 100, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(49, 48, 49, 0.6);
+  outline: 0 none;
+  background: $salmon;
 }
